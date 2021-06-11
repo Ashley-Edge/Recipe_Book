@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Tea Recipe</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <!-- <script src="tea.js"></script> -->
     <link href="tea.css" rel="stylesheet" type="text/css" />
   </head>
 	<body>
@@ -18,7 +19,7 @@
 				<p>At the very least, tea is a flavourful way of getting enough fluid into your body each day. On top of that, studies have shown teas can help protect your teeth and your heart</p>
 			</header>
 			
-			<section>
+			<section onmouseover="ingredientsHover()" onmouseout="ingredientsNormal()">
 				<h2>Ingredients <i class="fa fa-coffee" aria-hidden="true"></i></h2>
 				<ul>
 					<li>Tea Bag</li>
@@ -28,7 +29,7 @@
 				</ul>
 			</section>
 			
-			<section>
+			<section onmouseover="preparationHover()" onmouseout="preparationNormal()">
 				<h2>Preparation <i class="fa fa-check-square-o" aria-hidden="true"></i></h2>
 			<ol>
 					<li>Run the tap a little so the water's nively aerated, and only boil it once to keep the oxygen level up. Oxygen in water helps flavour!</li>
@@ -45,6 +46,23 @@
 				<p>Coded by Ashley Edge June 2021</p>
 			</footer>
 		</div>
-		<script src="script.js"></script>
+		<script>
+		function ingredientsHover(){
+			document.getElementById("ingredients").style.fontSize = "300%";
+		}
+			
+		function ingredientsNormal(){
+			document.getElementById("ingredients").style.fontSize = "100%";
+		}
+		    
+		function preparationHover(){
+			document.getElementById("preparation").style.fontSize = "300%";
+		}
+		    
+		function preparationNormal(){
+			document.getElementById("preparation").style.fontSize = "100%";
+		}
+		    
+		</script>
 	</body>
 </html>
